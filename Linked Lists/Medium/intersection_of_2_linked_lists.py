@@ -24,6 +24,13 @@ space is o(1) because we are not using anything to store the list addresses expe
     else return none
 """
 
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+class Solution:
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
         sizeA=0
         sizeB=0
         tempA=headA
@@ -52,3 +59,4 @@ space is o(1) because we are not using anything to store the list addresses expe
             headA=headA.next
             headB=headB.next
         return None
+        
